@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const Userlar = createAsyncThunk("use", async () => {
   const responce = await axios.get("https://dummyjson.com/users");
-  return responce.data;
+  return responce.data.users;
 });
 const userSlice = createSlice({
   name: "useSlice",
